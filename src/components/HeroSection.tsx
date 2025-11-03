@@ -16,7 +16,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            For Steady State to Approximate InfoSewer
+            For Steady State to Approximate InfoSewer Steady State Peaking Factors
           </p>
           
           <p className="text-lg mb-8 text-primary-foreground/80 max-w-3xl mx-auto">
