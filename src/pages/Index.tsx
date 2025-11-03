@@ -73,7 +73,8 @@ const Index = () => {
 
       <footer className="border-t border-border py-8 mt-16">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>ICM InfoSewer Peakable Flow Calculator • Professional Engineering Tool</p>
+          <p>InfoWorks ICM Peakable Flow Calculator for Steady State to Approximate InfoSewer</p>
+          <p className="text-sm mt-2">Professional Engineering Tool</p>
         </div>
       </footer>
     </div>

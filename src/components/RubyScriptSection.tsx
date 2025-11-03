@@ -4,7 +4,7 @@ import { Copy, Download, FileCode } from "lucide-react";
 import { toast } from "sonner";
 
 const rubyScript = `# ============================================================================
-# Peakable Flow Calculator for ICM InfoSewer - COMPLETE FIXED VERSION
+# Peakable Flow Calculator for InfoWorks ICM to Approximate InfoSewer - COMPLETE VERSION
 # ============================================================================
 
 # ============================================================================
@@ -770,7 +770,7 @@ const RubyScriptSection = () => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'infosewer_peakable_flow_calculator.rb';
+    a.download = 'infoworks_icm_peakable_flow_approximate_infosewer.rb';
     a.click();
     toast.success("Ruby script downloaded!");
   };
@@ -783,10 +783,10 @@ const RubyScriptSection = () => {
             <div>
               <CardTitle className="text-3xl flex items-center gap-2">
                 <FileCode className="h-8 w-8 text-primary" />
-                ICM InfoSewer Ruby Script
+                InfoWorks ICM Ruby Script
               </CardTitle>
               <CardDescription className="text-base mt-2">
-                Complete Ruby script for calculating peakable flows in ICM InfoSewer
+                Ruby script for peakable flows to approximate InfoSewer in InfoWorks ICM
               </CardDescription>
             </div>
             <div className="flex gap-2">
@@ -808,12 +808,12 @@ const RubyScriptSection = () => {
               How to Use This Script
             </h4>
             <ol className="space-y-2 text-sm text-foreground/80 ml-4 list-decimal">
-              <li>Open ICM InfoSewer (or InfoWorks ICM) and load your network model</li>
+              <li>Open InfoWorks ICM and load your network model</li>
               <li>Go to <strong>Network → Run Ruby Script</strong></li>
               <li>Either paste the script or load the downloaded .rb file</li>
               <li>Configure parameters in the dialog (formula, flow per capita, cutoff)</li>
-              <li>Run the script - it will calculate and store peakable flows in user_number_1 field</li>
-              <li>Results will be exported to CSV automatically (if enabled)</li>
+              <li>Run the script - it will calculate steady state peakable flows in user_number_1 field</li>
+              <li>Results approximate InfoSewer methodology and export to CSV (if enabled)</li>
             </ol>
           </div>
 
@@ -836,7 +836,7 @@ const RubyScriptSection = () => {
                 <CardTitle className="text-sm font-semibold text-muted-foreground">Requirements</CardTitle>
               </CardHeader>
               <CardContent className="text-sm space-y-1">
-                <div>• ICM InfoSewer or InfoWorks ICM</div>
+                <div>• InfoWorks ICM (any version)</div>
                 <div>• Network with population data</div>
                 <div>• Subcatchments connected to nodes</div>
                 <div>• Ruby libraries: date, csv</div>
