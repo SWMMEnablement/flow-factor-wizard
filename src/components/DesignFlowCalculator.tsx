@@ -98,7 +98,7 @@ const DesignFlowCalculator = ({ onCalculate }: DesignFlowCalculatorProps) => {
       };
 
       onCalculate(results, params);
-      toast.success(`Calculated design flows for ${results.length} population values`);
+      toast.success(`Calculated peakable flows for ${results.length} population values`);
 
     } catch (error: any) {
       toast.error(error.message || "Calculation error occurred");
@@ -111,10 +111,10 @@ const DesignFlowCalculator = ({ onCalculate }: DesignFlowCalculatorProps) => {
         <CardHeader>
           <CardTitle className="text-3xl flex items-center gap-2">
             <Calculator className="h-8 w-8 text-primary" />
-            Design Flow Calculator
+            Peakable Flow Calculator
           </CardTitle>
           <CardDescription className="text-base">
-            Calculate design flows using standard or custom peaking factor formulas
+            Calculate peakable flows using standard or custom peaking factor formulas
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -224,7 +224,7 @@ const DesignFlowCalculator = ({ onCalculate }: DesignFlowCalculatorProps) => {
             className="w-full"
           >
             <Calculator className="mr-2 h-5 w-5" />
-            Calculate Design Flows
+            Calculate Peakable Flows
           </Button>
         </CardContent>
       </Card>

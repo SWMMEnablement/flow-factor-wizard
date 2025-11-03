@@ -12,11 +12,11 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            InfoWorks ICM Design Flow Calculator
+            ICM InfoSewer Peakable Flow Calculator
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Professional peaking factor calculations for sanitary sewer design and hydraulic modeling
+            Professional peakable flow calculations for sanitary sewer design and hydraulic modeling
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">

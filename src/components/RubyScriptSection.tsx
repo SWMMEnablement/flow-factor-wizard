@@ -4,7 +4,7 @@ import { Copy, Download, FileCode } from "lucide-react";
 import { toast } from "sonner";
 
 const rubyScript = `# ============================================================================
-# Design Flow Calculator for InfoWorks ICM - COMPLETE FIXED VERSION
+# Peakable Flow Calculator for ICM InfoSewer - COMPLETE FIXED VERSION
 # ============================================================================
 
 # ============================================================================
@@ -40,7 +40,7 @@ unless net
 end
 
 puts "\\n" + "="*80
-puts " DESIGN FLOW CALCULATOR - ENHANCED VERSION 2.0"
+puts " PEAKABLE FLOW CALCULATOR - ENHANCED VERSION 2.0"
 puts " " + Time.now.strftime("%Y-%m-%d %H:%M:%S")
 puts "="*80
 
@@ -89,7 +89,7 @@ puts "\\nDisplaying parameter dialog..."
 preset_options = FORMULA_PRESETS.keys
 
 layout = [
-  ['=== DESIGN FLOW CALCULATOR ===', 'READONLY', ''],
+  ['=== PEAKABLE FLOW CALCULATOR ===', 'READONLY', ''],
   ['', 'READONLY', ''],
   
   ['Formula Preset', 'String', 'Harmon Formula', nil, 'LIST', preset_options],
@@ -118,7 +118,7 @@ layout = [
 ]
 
 result = WSApplication.prompt(
-  'Design Flow Calculator - Enter Parameters',
+  'Peakable Flow Calculator - Enter Parameters',
   layout,
   false
 )
@@ -438,7 +438,7 @@ end
 # ============================================================================
 
 puts "\\n" + "="*80
-puts "PHASE 2: CALCULATING DESIGN FLOWS"
+puts "PHASE 2: CALCULATING PEAKABLE FLOWS"
 puts "="*80
 
 all_conduits = net.row_object_collection('hw_conduit')
@@ -728,7 +728,7 @@ end
 # STEP 6: Final summary
 # ============================================================================
 
-summary = "Design Flow Calculation Complete!\\n\\n"
+summary = "Peakable Flow Calculation Complete!\\n\\n"
 summary += "Mode: #{dry_run ? 'DRY RUN' : 'LIVE RUN'}\\n\\n"
 summary += "Results:\\n"
 summary += "  Processed: #{processed}\\n"
@@ -737,10 +737,10 @@ summary += "  Skipped: #{skipped_no_pop}\\n"
 summary += "  Errors: #{errors}\\n\\n"
 
 if updated > 0
-  summary += "Design Flow Range:\\n"
-  summary += "  Min: #{min_design_flow.round(4)} #{flow_units}\\n"
-  summary += "  Max: #{max_design_flow.round(4)} #{flow_units}\\n"
-  summary += "  Avg: #{(sum_design_flow / updated).round(4)} #{flow_units}\\n\\n"
+  summary += "Peakable Flow Range:\n"
+  summary += "  Min: #{min_design_flow.round(4)} #{flow_units}\n"
+  summary += "  Max: #{max_design_flow.round(4)} #{flow_units}\n"
+  summary += "  Avg: #{(sum_design_flow / updated).round(4)} #{flow_units}\n\n"
 end
 
 summary += "Formula: #{formula_preset}\\n"
@@ -770,7 +770,7 @@ const RubyScriptSection = () => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'infoworks_design_flow_calculator.rb';
+    a.download = 'infosewer_peakable_flow_calculator.rb';
     a.click();
     toast.success("Ruby script downloaded!");
   };
@@ -783,10 +783,10 @@ const RubyScriptSection = () => {
             <div>
               <CardTitle className="text-3xl flex items-center gap-2">
                 <FileCode className="h-8 w-8 text-primary" />
-                InfoWorks ICM Ruby Script
+                ICM InfoSewer Ruby Script
               </CardTitle>
               <CardDescription className="text-base mt-2">
-                Complete Ruby script for calculating design flows in InfoWorks ICM
+                Complete Ruby script for calculating peakable flows in ICM InfoSewer
               </CardDescription>
             </div>
             <div className="flex gap-2">
@@ -808,11 +808,11 @@ const RubyScriptSection = () => {
               How to Use This Script
             </h4>
             <ol className="space-y-2 text-sm text-foreground/80 ml-4 list-decimal">
-              <li>Open InfoWorks ICM and load your network model</li>
+              <li>Open ICM InfoSewer (or InfoWorks ICM) and load your network model</li>
               <li>Go to <strong>Network → Run Ruby Script</strong></li>
               <li>Either paste the script or load the downloaded .rb file</li>
               <li>Configure parameters in the dialog (formula, flow per capita, cutoff)</li>
-              <li>Run the script - it will calculate and store design flows in user_number_1 field</li>
+              <li>Run the script - it will calculate and store peakable flows in user_number_1 field</li>
               <li>Results will be exported to CSV automatically (if enabled)</li>
             </ol>
           </div>
@@ -836,7 +836,7 @@ const RubyScriptSection = () => {
                 <CardTitle className="text-sm font-semibold text-muted-foreground">Requirements</CardTitle>
               </CardHeader>
               <CardContent className="text-sm space-y-1">
-                <div>• InfoWorks ICM (any version)</div>
+                <div>• ICM InfoSewer or InfoWorks ICM</div>
                 <div>• Network with population data</div>
                 <div>• Subcatchments connected to nodes</div>
                 <div>• Ruby libraries: date, csv</div>
@@ -875,8 +875,8 @@ const RubyScriptSection = () => {
               <li><strong>Network Analysis:</strong> Traces upstream through the pipe network to calculate contributing population for each conduit</li>
               <li><strong>Flow Splitting:</strong> Handles junctions with multiple downstream pipes by proportioning population based on cross-sectional areas</li>
               <li><strong>Peaking Factors:</strong> Calculates EFF (peaking factors) using configurable formulas (Harmon, Modified Harmon, Babbitt, or custom)</li>
-              <li><strong>Design Flows:</strong> Computes design flows as: Q<sub>design</sub> = EFF × Population × Q<sub>per capita</sub></li>
-              <li><strong>Data Storage:</strong> Writes calculated design flows directly to the conduit's user_number_1 field for use in hydraulic modeling</li>
+              <li><strong>Peakable Flows:</strong> Computes design flows as: Q<sub>peakable</sub> = EFF × Population × Q<sub>per capita</sub></li>
+              <li><strong>Data Storage:</strong> Writes calculated peakable flows directly to the conduit's user_number_1 field for use in hydraulic modeling</li>
               <li><strong>Export:</strong> Generates comprehensive CSV reports with all calculation results and statistics</li>
             </ul>
           </div>

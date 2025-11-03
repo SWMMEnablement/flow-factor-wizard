@@ -56,9 +56,9 @@ const ResultsVisualization = ({ results, params }: ResultsVisualizationProps) =>
     <div className="space-y-6">
       <div className="grid md:grid-cols-4 gap-4">
         <Card className="shadow-lg">
-          <CardHeader className="pb-2">
-            <CardDescription>Total Design Flow</CardDescription>
-          </CardHeader>
+        <CardHeader className="pb-2">
+          <CardDescription>Total Peakable Flow</CardDescription>
+        </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
               <Droplets className="h-5 w-5 text-primary" />
@@ -179,8 +179,8 @@ const ResultsVisualization = ({ results, params }: ResultsVisualizationProps) =>
 
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="text-xl">Design Flow Distribution</CardTitle>
-          <CardDescription>Calculated design flows for each population</CardDescription>
+          <CardTitle className="text-xl">Peakable Flow Distribution</CardTitle>
+          <CardDescription>Calculated peakable flows for each population</CardDescription>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={300}>
@@ -197,7 +197,7 @@ const ResultsVisualization = ({ results, params }: ResultsVisualizationProps) =>
               <Bar 
                 dataKey="designFlow" 
                 fill="hsl(var(--accent))" 
-                name="Design Flow"
+                name="Peakable Flow"
               />
             </BarChart>
           </ResponsiveContainer>
@@ -222,7 +222,7 @@ const ResultsVisualization = ({ results, params }: ResultsVisualizationProps) =>
                   <th className="text-left py-3 px-4">Population</th>
                   <th className="text-right py-3 px-4">EFF (Calc)</th>
                   <th className="text-right py-3 px-4">EFF (Capped)</th>
-                  <th className="text-right py-3 px-4">Design Flow ({results[0].flowUnits})</th>
+                  <th className="text-right py-3 px-4">Peakable Flow ({results[0].flowUnits})</th>
                 </tr>
               </thead>
               <tbody>

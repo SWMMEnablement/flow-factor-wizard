@@ -6,22 +6,24 @@ const AboutSection = () => {
     <div className="space-y-8">
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="text-3xl">What is InfoWorks ICM?</CardTitle>
+          <CardTitle className="text-3xl">What is ICM InfoSewer?</CardTitle>
           <CardDescription className="text-base">
-            Industry-leading integrated catchment modeling software
+            Professional sanitary sewer modeling and analysis software
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 text-foreground/80">
           <p className="text-lg leading-relaxed">
-            <strong className="text-foreground">InfoWorks ICM</strong> (Integrated Catchment Modeling) is a comprehensive hydraulic modeling 
+            <strong className="text-foreground">ICM InfoSewer</strong> is a comprehensive hydraulic modeling 
             software developed by Innovyze (now part of Autodesk). It's used worldwide by water utilities, 
-            consulting engineers, and municipalities for designing and analyzing urban drainage systems, 
-            sanitary sewers, and combined sewer networks.
+            consulting engineers, and municipalities for designing and analyzing sanitary sewer systems 
+            and wastewater collection networks.
           </p>
           <p className="leading-relaxed">
-            The software enables engineers to model complex hydraulic networks, simulate flow conditions, 
-            assess system capacity, and optimize infrastructure design. It integrates surface runoff, 
-            sewer networks, treatment facilities, and receiving waters into a single modeling environment.
+            The software enables engineers to model complex sanitary sewer networks, perform peakable flow analysis, 
+            assess system capacity, and optimize infrastructure design. This calculator focuses on the 
+            <strong className="text-foreground"> peakable flow calculations</strong>—determining design flows 
+            based on contributing population and peaking factors, similar to InfoSewer's methodology but adaptable 
+            to various modeling environments.
           </p>
         </CardContent>
       </Card>
@@ -112,20 +114,20 @@ const AboutSection = () => {
               </div>
               <div>
                 <CardTitle className="text-xl">Why This Tool?</CardTitle>
-                <CardDescription>Automated calculations</CardDescription>
+                <CardDescription>Automated peakable flow calculations</CardDescription>
               </div>
             </div>
           </CardHeader>
           <CardContent className="space-y-3 text-foreground/80">
             <p>
-              This web-based calculator replicates the functionality of InfoWorks ICM's design 
-              flow calculation scripts, making it easier to:
+              This web-based calculator provides peakable flow calculation functionality similar to 
+              ICM InfoSewer's design flow analysis, making it easier to:
             </p>
             <ul className="list-disc list-inside space-y-1 ml-2">
               <li>Understand different peaking factor formulas</li>
-              <li>Compare formula results</li>
-              <li>Visualize the impact of parameters</li>
-              <li>Export results for documentation</li>
+              <li>Compare formula results for sanitary sewers</li>
+              <li>Visualize the impact of parameters on design flows</li>
+              <li>Export results for documentation and reporting</li>
             </ul>
           </CardContent>
         </Card>
