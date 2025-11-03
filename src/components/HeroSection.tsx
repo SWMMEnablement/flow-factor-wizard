@@ -20,7 +20,7 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg mb-8 text-primary-foreground/80 max-w-3xl mx-auto">
-            Professional peakable flow calculations for sanitary sewer design using peaking factor formulas
+            Peakable flow calculations for sanitary sewer design using peaking factor formulas
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
