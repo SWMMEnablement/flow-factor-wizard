@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Calculator, BookOpen, LineChart, FileDown, FileCode } from "lucide-react";
+import { Calculator, BookOpen, LineChart, FileDown, FileCode, GitCompareArrows } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import FormulaLibrary from "@/components/FormulaLibrary";
+import FormulaComparison from "@/components/FormulaComparison";
 import DesignFlowCalculator from "@/components/DesignFlowCalculator";
 import ResultsVisualization from "@/components/ResultsVisualization";
 import RubyScriptSection from "@/components/RubyScriptSection";
@@ -18,7 +19,7 @@ const Index = () => {
       
       <main className="container mx-auto px-4 py-12">
         <Tabs defaultValue="about" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 max-w-3xl mx-auto mb-8">
+          <TabsList className="grid w-full grid-cols-6 max-w-4xl mx-auto mb-8">
             <TabsTrigger value="about" className="flex items-center gap-2">
               <BookOpen className="h-4 w-4" />
               <span className="hidden sm:inline">About</span>
@@ -26,6 +27,10 @@ const Index = () => {
             <TabsTrigger value="formulas" className="flex items-center gap-2">
               <FileDown className="h-4 w-4" />
               <span className="hidden sm:inline">Formulas</span>
+            </TabsTrigger>
+            <TabsTrigger value="compare" className="flex items-center gap-2">
+              <GitCompareArrows className="h-4 w-4" />
+              <span className="hidden sm:inline">Compare</span>
             </TabsTrigger>
             <TabsTrigger value="calculator" className="flex items-center gap-2">
               <Calculator className="h-4 w-4" />
@@ -47,6 +52,10 @@ const Index = () => {
 
           <TabsContent value="formulas">
             <FormulaLibrary />
+          </TabsContent>
+
+          <TabsContent value="compare">
+            <FormulaComparison />
           </TabsContent>
 
           <TabsContent value="calculator">
