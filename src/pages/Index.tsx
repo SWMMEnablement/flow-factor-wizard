@@ -54,6 +54,11 @@ const Index = () => {
             <FormulaLibrary />
           </TabsContent>
 
+          <TabsContent value="compare">
+            <FormulaComparison />
+          </TabsContent>
+          </TabsContent>
+
           <TabsContent value="calculator">
             <DesignFlowCalculator 
               onCalculate={(newResults, params) => {
