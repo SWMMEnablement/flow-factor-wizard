@@ -61,7 +61,7 @@ src/
 Explains InfoWorks ICM, peaking factors, design flows, upstream network analysis, and the motivation for this tool.
 
 ### 2. Formulas
-Reference library of supported peaking factor formulas:
+Reference library of supported peaking factor formulas (with LaTeX-style equations and use-case descriptions).
 
 | Formula          | Equation                              | Use Case                  |
 |-----------------|---------------------------------------|---------------------------|
