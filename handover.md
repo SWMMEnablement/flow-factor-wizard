@@ -72,7 +72,14 @@ Reference library of supported peaking factor formulas (with LaTeX-style equatio
 
 Where **P** = population in thousands.
 
-### 3. Calculator
+### 3. Compare
+Side-by-side comparison of peaking factor curves on a single chart:
+- **Checkboxes** to toggle Harmon, Modified Harmon, and Babbitt formulas
+- **Adjustable inputs** for min/max population and number of data points
+- **Line chart** plotting EFF vs Population for all selected formulas simultaneously
+- **Data table** below the chart showing EFF values for every formula at each population point
+
+### 4. Calculator
 Interactive form to compute peakable flows:
 - **Inputs:** Formula selection, flow per capita (L/person/day), EFF cutoff, unit conversion toggle, comma-separated population values
 - **Custom mode:** Exposes all 7 coefficients (c1, c2, c3, e1, e2, m1, m2)
