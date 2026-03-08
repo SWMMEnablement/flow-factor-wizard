@@ -25,7 +25,7 @@ const DesignFlowCalculator = ({ onCalculate }: DesignFlowCalculatorProps) => {
   const [cutoff, setCutoff] = useState('6.0');
   const [convertToSeconds, setConvertToSeconds] = useState(true);
   const [populations, setPopulations] = useState('100, 500, 1000, 5000, 10000');
-  
+  const fileInputRef = useRef<HTMLInputElement>(null);
   // Custom formula coefficients
   const [coefficients, setCoefficients] = useState(formulas['harmon']);
 
