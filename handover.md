@@ -85,7 +85,7 @@ Interactive form to compute peakable flows:
 - **Custom mode:** Exposes all 7 coefficients (c1, c2, c3, e1, e2, m1, m2)
 - **Output:** Results passed to the Results tab via React state
 
-### 4. Results
+### 5. Results
 Visualizations and data from the last calculation:
 - Summary cards: total flow, average EFF, EFF range, total population
 - Line chart: EFF vs population (calculated and capped)
