@@ -177,14 +177,52 @@ const DesignFlowCalculator = ({ onCalculate }: DesignFlowCalculatorProps) => {
 
             <div>
               <Label htmlFor="populations">Population Values (comma-separated)</Label>
-              <Input
-                id="populations"
-                value={populations}
-                onChange={(e) => setPopulations(e.target.value)}
-                placeholder="100, 500, 1000, 5000, 10000"
-              />
+              <div className="flex gap-2">
+                <Input
+                  id="populations"
+                  value={populations}
+                  onChange={(e) => setPopulations(e.target.value)}
+                  placeholder="100, 500, 1000, 5000, 10000"
+                  className="flex-1"
+                />
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".csv,.txt"
+                  className="hidden"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                      const text = ev.target?.result as string;
+                      const values = text
+                        .split(/[\n,;\t]+/)
+                        .map(v => v.trim())
+                        .filter(v => /^\d+(\.\d+)?$/.test(v));
+                      if (values.length === 0) {
+                        toast.error("No valid population numbers found in the file");
+                        return;
+                      }
+                      setPopulations(values.join(', '));
+                      toast.success(`Imported ${values.length} population values from CSV`);
+                    };
+                    reader.readAsText(file);
+                    e.target.value = '';
+                  }}
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="icon"
+                  onClick={() => fileInputRef.current?.click()}
+                  title="Import from CSV"
+                >
+                  <Upload className="h-4 w-4" />
+                </Button>
+              </div>
               <p className="text-xs text-muted-foreground mt-1">
-                Enter multiple population values to compare results
+                Enter values manually or import from a CSV/text file
               </p>
             </div>
           </div>
