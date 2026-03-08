@@ -57,7 +57,6 @@ const Index = () => {
           <TabsContent value="compare">
             <FormulaComparison />
           </TabsContent>
-          </TabsContent>
 
           <TabsContent value="calculator">
             <DesignFlowCalculator 
