@@ -61,7 +61,7 @@ src/
 Explains InfoWorks ICM, peaking factors, design flows, upstream network analysis, and the motivation for this tool.
 
 ### 2. Formulas
-Reference library of supported peaking factor formulas:
+Reference library of supported peaking factor formulas (with LaTeX-style equations and use-case descriptions).
 
 | Formula          | Equation                              | Use Case                  |
 |-----------------|---------------------------------------|---------------------------|
@@ -72,20 +72,27 @@ Reference library of supported peaking factor formulas:
 
 Where **P** = population in thousands.
 
-### 3. Calculator
+### 3. Compare
+Side-by-side comparison of peaking factor curves on a single chart:
+- **Checkboxes** to toggle Harmon, Modified Harmon, and Babbitt formulas
+- **Adjustable inputs** for min/max population and number of data points
+- **Line chart** plotting EFF vs Population for all selected formulas simultaneously
+- **Data table** below the chart showing EFF values for every formula at each population point
+
+### 4. Calculator
 Interactive form to compute peakable flows:
 - **Inputs:** Formula selection, flow per capita (L/person/day), EFF cutoff, unit conversion toggle, comma-separated population values
 - **Custom mode:** Exposes all 7 coefficients (c1, c2, c3, e1, e2, m1, m2)
 - **Output:** Results passed to the Results tab via React state
 
-### 4. Results
+### 5. Results
 Visualizations and data from the last calculation:
 - Summary cards: total flow, average EFF, EFF range, total population
 - Line chart: EFF vs population (calculated and capped)
 - Bar chart: design flow distribution
 - Data table with CSV export
 
-### 5. Ruby Script
+### 6. Ruby Script
 A complete Ruby script (~760 lines) designed to run inside InfoWorks ICM's scripting environment. Features:
 - Upstream network tracing and population aggregation
 - Flow splitting at junctions
