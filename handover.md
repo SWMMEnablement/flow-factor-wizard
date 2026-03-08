@@ -92,7 +92,7 @@ Visualizations and data from the last calculation:
 - Bar chart: design flow distribution
 - Data table with CSV export
 
-### 5. Ruby Script
+### 6. Ruby Script
 A complete Ruby script (~760 lines) designed to run inside InfoWorks ICM's scripting environment. Features:
 - Upstream network tracing and population aggregation
 - Flow splitting at junctions
