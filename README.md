@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# Flow Factor Wizard
 
-## Project info
+> _README added by Robert Dickinson via Comet._
 
-**URL**: https://lovable.dev/projects/2b09d90f-b52f-45f0-a329-44686a8794f8
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn--ui-000000?logo=shadcnui&logoColor=white)
 
-## How can I edit this code?
+## About
 
-There are several ways of editing your application.
+**Flow Factor Wizard** is an interactive design-flow and peaking-factor calculator for sewer/wastewater modeling. It computes design (peakable) flows from population data, lets users compare multiple peaking-factor formulas, supports CSV population import, visualizes results, and can generate matching InfoWorks ICM Ruby scripts.
 
-**Use Lovable**
+It is part of the SWMMEnablement collection and is built on a modern Vite + React + TypeScript frontend styled with Tailwind CSS and shadcn/ui.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2b09d90f-b52f-45f0-a329-44686a8794f8) and start prompting.
+## What's Inside
 
-Changes made via Lovable will be committed automatically to this repo.
+| Area | Description |
+| --- | --- |
+| `src/components/DesignFlowCalculator.tsx` | Population-based design / peakable flow calculator (CSV import) |
+| `src/components/FormulaLibrary.tsx` | Library of peaking-factor formulas (incl. InfoWorks ICM) |
+| `src/components/FormulaComparison.tsx` | Side-by-side formula comparison |
+| `src/components/ResultsVisualization.tsx` | Charts and visualization of results |
+| `src/components/RubyScriptSection.tsx` | Generates ICM Ruby scripts from inputs |
+| `src/components/AboutSection.tsx`, `HeroSection.tsx` | Landing and about content |
+| `src/components/ui/` | shadcn/ui reusable UI primitives |
+| `src/hooks/`, `src/lib/` | Custom React hooks and utilities |
+| `public/` | Static assets |
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Layer | Technology |
+| --- | --- |
+| Language | TypeScript |
+| Framework | React |
+| Build tool | Vite |
+| Styling | Tailwind CSS |
+| UI components | shadcn/ui |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/SWMMEnablement/flow-factor-wizard.git
+cd flow-factor-wizard
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the local URL printed by Vite (typically http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Build for production
+npm run build
 
-**Use GitHub Codespaces**
+# Preview the production build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2b09d90f-b52f-45f0-a329-44686a8794f8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+No license file is currently included. Contact the SWMMEnablement organization regarding reuse.
